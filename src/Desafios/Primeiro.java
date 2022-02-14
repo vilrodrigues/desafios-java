@@ -18,14 +18,7 @@ public class Primeiro {
         Scanner scan = new Scanner(System.in);
        
         System.out.print("Informe o N: ");
-        
         int n = scan.nextInt();
-        if(n <= 0){
-            do {
-                System.out.print("Por favor, informe um número inteiro maior que zero: ");
-                n = scan.nextInt();  
-            } while(n <= 0);
-        }
         
         int qtdEspaco = n - 1;
         int qtdAsterisco = 1;
