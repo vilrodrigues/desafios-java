@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Desafios;
 
 import java.util.Scanner;
@@ -20,27 +15,29 @@ public class Primeiro {
         System.out.print("Informe o N: ");
         int n = scan.nextInt();
         
-        int qtdEspaco = n - 1;
-        int qtdAsterisco = 1;
+        int numberOfSpaces = n - 1;
+        int numberOfAsterisk = 1;
         
         for (int i = 0; i < n; i++) { 
-            contaEspacos(qtdEspaco);
-            qtdEspaco--;
+            // As the number of spaces decreases
+            coutingSpaces(numberOfSpaces);
+            numberOfSpaces--;
             
-            printaAsterisco(qtdAsterisco);
-            qtdAsterisco++;
+            // The number of asterisk increases
+            printsAsterisk(numberOfAsterisk);
+            numberOfAsterisk++;
             
             System.out.println();
         }
     }
     
-    public static void contaEspacos(int qtdEspaco){
+    public static void coutingSpaces(int qtdEspaco){
         for (int i = 0; i < qtdEspaco; i++) {
             System.out.print(" ");
         }
     }
     
-    public static void printaAsterisco(int qtdAsterisco){
+    public static void printsAsterisk(int qtdAsterisco){
         for (int i = 0; i < qtdAsterisco; i++) {
             System.out.print("*");
         }
