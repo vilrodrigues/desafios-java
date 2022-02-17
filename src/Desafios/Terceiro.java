@@ -11,6 +11,11 @@ import java.util.Scanner;
  */
 public class Terceiro 
 {
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) 
     {
         Scanner scan = new Scanner(System.in);
@@ -36,6 +41,11 @@ public class Terceiro
         System.out.println(anagramsFound);
     }
     
+    /**
+     *
+     * @param breakThisWord - Given String to break into groups of characters.
+     * @return An arrayList that contains in it's indexes the given String separated into groups of characters.
+     */
     public static ArrayList<String> breakWord(String breakThisWord)
     {
         ArrayList<String> brokenWord = new ArrayList<>();
@@ -49,23 +59,29 @@ public class Terceiro
         return brokenWord;
     }
 
-    public static boolean isItAnagram(String s1, String s2)
+    /**
+     *
+     * @param str1 - A String to compare to the second parameter.
+     * @param str2 - A String to compare to the first parameter.
+     * @return If the given two parameters are anagrams, the return is true, else returns false.
+     */
+    public static boolean isItAnagram(String str1, String str2)
     {
         // If both lenghts are not matching of course it is not an anagram
-        if(s1.length() != s2.length())
+        if(str1.length() != str2.length())
             return false;
         else
         {
             // Turning the strings into char arrays so we can sort it
-            char[] arr1 = s1.toCharArray();
-            char[] arr2 = s2.toCharArray();
+            char[] str1CharArray = str1.toCharArray();
+            char[] str2CharArray = str2.toCharArray();
             
             // Sorting here
-            Arrays.sort(arr1);
-            Arrays.sort(arr2);
+            Arrays.sort(str1CharArray);
+            Arrays.sort(str2CharArray);
             
             // Checking if it is an anagram
-            return (Arrays.equals(arr1, arr2));
+            return (Arrays.equals(str1CharArray, str2CharArray));
         }
     }
 }

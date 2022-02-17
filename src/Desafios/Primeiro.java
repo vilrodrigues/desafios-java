@@ -8,6 +8,10 @@ import java.util.Scanner;
  */
 public class Primeiro {
     
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
@@ -31,14 +35,21 @@ public class Primeiro {
         }
     }
     
-    public static void coutingSpaces(int qtdEspaco){
-        for (int i = 0; i < qtdEspaco; i++) {
+    /** Method that counts and prints all spaces needed .
+     * @param spaces - This parameter is the number of spaces that are going to be printed.
+     */
+    
+    public static void coutingSpaces(int spaces){
+        for (int i = 0; i < spaces; i++) {
             System.out.print(" ");
         }
     }
     
-    public static void printsAsterisk(int qtdAsterisco){
-        for (int i = 0; i < qtdAsterisco; i++) {
+    /** Method that prints all asterisk needed.
+     * @param asterisk - This parameter is the number of asterisk that are going to be printed.
+     */
+    public static void printsAsterisk(int asterisk){
+        for (int i = 0; i < asterisk; i++) {
             System.out.print("*");
         }
     }
